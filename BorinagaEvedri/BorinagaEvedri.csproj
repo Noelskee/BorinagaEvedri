@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF237C11-8CCB-4E87-8D12-FABD99724284}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BorinagaEvedri</RootNamespace>
+    <AssemblyName>BorinagaEvedri</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbStatus.Designer.cs">
+      <DependentUpon>DbStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inactive Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inactive Students.Designer.cs">
+      <DependentUpon>Inactive Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logs.Designer.cs">
+      <DependentUpon>Logs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mylogs.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signin.Designer.cs">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbStatus.resx">
+      <DependentUpon>DbStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inactive Students.resx">
+      <DependentUpon>Inactive Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logs.resx">
+      <DependentUpon>Logs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Signin.resx">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FreeSpire.XLS">
+      <Version>14.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Guna.UI2.WinForms">
+      <Version>2.0.4.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging">
+      <Version>9.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Console">
+      <Version>9.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>6.1.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Active back g.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b0813c8a8467b3d94fa3012d4be444ff.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Badminton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Basketball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark-violet-gradient-waves-pn6uh6bd12xyrfxy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debut.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.Trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gradient.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand Wave.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting.Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soccerball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tropical_Leaves-removebg-previe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update.Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Icon.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
